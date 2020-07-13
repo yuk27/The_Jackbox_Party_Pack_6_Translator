@@ -11,7 +11,9 @@ class Utils:
     local_path = os.getcwd()
     config_path = "{0}\\{1}".format(local_path, "config.json")
     translator = None
+    config = None
     language = 'es'
+
 
     @staticmethod
     def unzip(path, file, directory_to_extract_to='assets'):
@@ -79,6 +81,8 @@ class Utils:
 
         if not text or str.isspace(text):
             return ""
+        if text.lower() in self.config['localization_skip_words']:
+            return text
 
         dict_special_values = {}
 
@@ -178,6 +182,7 @@ class Utils:
             config = default_config
             Utils.write_json(default_config, self.local_path, "config.json")
             print("Config created")
+        self.config = config
         return config
 
     def set_language(self, language):
@@ -215,7 +220,7 @@ class Utils:
                 for i in range(0, len(localization['table']['en'][line])):
                     localization['table']['en'][line][i] = self.translate(localization['table']['en'][line][i], special_characters=special_characters)
             else:
-                if line in config['localization_forced_ins'].keys:
+                if line in config['localization_forced_ins'].keys():
                     localization['table']['en'][line] = config['localization_forced_ins'][line]
                 else:
                     localization['table']['en'][line] = self.translate(localization['table']['en'][line], special_characters=special_characters)

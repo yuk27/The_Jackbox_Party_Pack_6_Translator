@@ -14,9 +14,26 @@ default_config = {
         'BACK_TO_PACK': 'ATRAS',
         'GO_TO': 'VE A',
         'PRESS': 'PULSA',
-        'EVERYBODYS_IN': 'TODOS LISTOS'
+        'EVERYBODYS_IN': 'TODOS LISTOS',
+        'UNHIDE': 'MOSTRAR',
+        "SETTINGS_VOLUME_DESCRIPTION": "Haz que el juego suene ALTO o BAJO.",
+        'VOLUME_DESCRIPTION': 'Haz que el juego suene ALTO o BAJO.',
+        'TWITCH_REQUIRED': 'Requerir cuenta en TWITCH',
+        "BLIND_BRACKET": "BRAKET CIEGO",
+        "TRIPLE_BLIND_BRACKET": "BRACKET CIEGO TRIPLE",
+        "BRACKET_WINNERS": "GANADORES DEL BRACKET",
+        "LEADERBOARD": "Tabla de Puntos",
+        "BADGE_TITLE_FAMILY_MODE": "APTO PARA TODA LA FAMILIA",
+        "MENU_GAME_NAME_1": "Fibber 3",
+        "QUIT": "SALIR"
     },
+    "localization_skip_words": ['twitter', 'spice girls', 'sub-zero'],
     "games": {
+        "PartyPack": {
+            "path": "assets\\games\\PartyPack",
+            "translate": True,
+            "filenames": {}
+        },
         "Bracketeering": {
             "path": "assets\\games\\Bracketeering",
             "translate": True,
@@ -27,17 +44,13 @@ default_config = {
                     "has_folder": True,
                     "subtitles_index": [],
                     "strings": ['category'],
-                    "dicts": ['decoys', 'twists', 'prompt', 'facts'],
+                    "dicts": ['prompt'],
+                    "dict_arrays": ['decoys', 'twists', 'facts'],
                     "special_characters": [['<', '>'], ['[', ']']],
                     "v": [3, 4, 6, 8, 10, 12, 13],
-                    "id": 1353
+                    "episodeid": 1353
                 }
             }
-        },
-        "PartyPack": {
-            "path": "assets\\games\\PartyPack",
-            "translate": True,
-            "filenames": {}
         }
     }
 }

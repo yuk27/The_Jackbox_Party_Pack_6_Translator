@@ -30,7 +30,7 @@ class GamesManager:
         data = self.utils.read_json("{0}\\{1}".format(self.input_path, file))
 
         if file_config['episodeid'] > 0:
-            data['episodeid'] = self.config['games'][self.game]['filenames']['{0}'.format(file[:-4])]['id']
+            data['episodeid'] = self.config['games'][self.game]['filenames']['{0}'.format(file[:-4])]['episodeid']
 
         amount_of_lines = len(data['content'])
         index = 0
@@ -40,10 +40,15 @@ class GamesManager:
             for string in self.config['games'][self.game]['filenames'][file_name]['strings']:
                 line[string] = self.utils.translate(line[string], special_characters=special_characters)
 
-            for key in self.config['games'][self.game]['filenames'][file_name]['dicts']:
+            for internal_dict in self.config['games'][self.game]['filenames'][file_name]['dicts']:
+                for t in line[internal_dict].keys():
+                    line[internal_dict][t] = self.utils.translate(line[internal_dict][t], special_characters=special_characters)
+
+            for key in self.config['games'][self.game]['filenames'][file_name]['dict_arrays']:
                 if key in line.keys():
-                    for t in line[key]:
-                        line[key][t] = self.utils.translate(line[key][t], special_characters=special_characters)
+                    for t in range(0, len(line[key])):
+                        for v in line[key][t].keys():
+                            line[key][t][v] = self.utils.translate(line[key][t][v], special_characters=special_characters)
 
             print("{0} - {1}% - {2}".format(file_name, int((index / amount_of_lines) * 100), line))
         self.utils.write_json(data, self.output_path, file)
@@ -58,12 +63,13 @@ class GamesManager:
 
         if not os.path.exists(self.output_path):
             os.makedirs(self.output_path)
-        self.utils.translate_menus(config, game)
+        # self.utils.translate_menus(config, game)
         for file in config['games'][game]['filenames']:
-            if os.path.isfile('{0}\\{1}'.format(file, '.jet')) and file['translate']:
+            if os.path.isfile('{0}{1}{2}'.format(self.input_path, file, '.jet')) and config['games'][game]['filenames'][file]['translate']:
                 if 'special_characters' in config['games'][game]['filenames'][file]:
                     special_characters = config['games'][game]['filenames'][file]['special_characters']
-                self.translate_file('{0}\\{1}'.format(file, '.jet'), config['games'][game]['filenames'][file], special_characters=special_characters)
-                if file['has_folder']:
+                self.translate_file('{0}{1}'.format(file, '.jet'), config['games'][game]['filenames'][file], special_characters=special_characters)
+                if config['games'][game]['filenames'][file]['has_folder']:
                     self.translate_folder(file)
+
 
