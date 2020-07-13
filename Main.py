@@ -1,4 +1,5 @@
 from Utilities import Utils
+from GamesManagement import GamesManager
 
 default_config = {
     "input_path": "",
@@ -35,11 +36,13 @@ utils.refresh_output('{0}\\{1}'.format(config['input_path'], 'assets'),
                      '{0}\\{1}'.format(config['output_path'], 'assets')
                      )
 
-
 for game in config['games'].keys():
-    print(game)
+    if config['games'][game]['translate']:
+        print('Translating: {0}'.format(game))
+        gamesManager = GamesManager(config, utils, game)
+    else:
+        print('{0} was skipped'.format(game))
 
-
-utils.zip(config['output_path'])
-utils.format_file('assets.zip', input_path=config['output_path'], output_path=config['input_path'])
-utils.remove_file(config['output_path'], 'assets.zip')
+#utils.zip(config['output_path'])
+#utils.format_file('assets.zip', input_path=config['output_path'], output_path=config['input_path'])
+#utils.remove_file(config['output_path'], 'assets.zip')
