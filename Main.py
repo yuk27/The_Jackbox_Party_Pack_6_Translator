@@ -31,12 +31,12 @@ default_config = {
     "games": {
         "PartyPack": {
             "path": "assets\\games\\PartyPack",
-            "translate": False,
+            "translate": True,
             "filenames": {}
         },
         "Bracketeering": {
             "path": "assets\\games\\Bracketeering",
-            "translate": False,
+            "translate": True,
 
             "filenames": {
                 'BRKPrompt': {
@@ -54,7 +54,7 @@ default_config = {
         },
         "Fibbage3": {
             "path": "assets\\games\\Fibbage3",
-            "translate": False,
+            "translate": True,
 
             "filenames": {
                 'fibbageshortie': {
@@ -109,7 +109,7 @@ default_config = {
 
             "filenames": {
                 'MMMonster': {
-                    "translate": False,
+                    "translate": True,
                     "has_folder": False,
                     "strings": ['name', 'shortDescription', 'description', 'selfDescription'],
                     "dicts": ['powerpopup', 'epitaph', 'hint'],
@@ -124,6 +124,65 @@ default_config = {
                     "has_folder": True,
                     "single_structure": True,
                     "strings": ['answer'],
+                    "dicts": [],
+                    "dict_arrays": [],
+                    "special_characters": None,
+                    "v": [],
+                    "s": [],
+                    "episodeid": 0
+                },
+                'MMMonsterAudienceQuestion': {
+                    "translate": True,
+                    "has_folder": True,
+                    "single_structure": True,
+                    "strings": ['question'],
+                    "dicts": [],
+                    "dict_arrays": [],
+                    "special_characters": None,
+                    "v": [],
+                    "s": [],
+                    "episodeid": 0
+                },
+                'MMMonsterNpc': {
+                    "translate": False,
+                    "has_folder": False,
+                    "strings": ['name', 'shortDescription', 'description', 'selfDescription'],
+                    "dicts": ['powerpopup', 'epitaph', 'hint'],
+                    "dict_arrays": [],
+                    "special_characters": [['<', '>'], ['[', ']']],
+                    "v": [],
+                    "s": [],
+                    "episodeid": 0
+                },
+                'MMMonsterNpcAnswer': {
+                    "translate": True,
+                    "has_folder": True,
+                    "single_structure": True,
+                    "strings": ['answer'],
+                    "dicts": [],
+                    "dict_arrays": [],
+                    "special_characters": None,
+                    "v": [],
+                    "s": [],
+                    "episodeid": 0
+                },
+                'MMSecretWords': {
+                    "translate": True,
+                    "has_folder": True,
+                    "single_structure": True,
+                    "strings": ['word'],
+                    "dicts": [],
+                    "dict_arrays": [],
+                    "special_characters": None,
+                    "v": [],
+                    "s": [],
+                    "episodeid": 0
+                },
+                'MMSponsors': {
+                    "translate": True,
+                    "has_folder": True,
+                    "single_structure": True,
+                    "strings": ['sponsor'],
                     "dicts": [],
                     "dict_arrays": [],
                     "special_characters": None,
