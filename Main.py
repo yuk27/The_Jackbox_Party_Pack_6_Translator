@@ -258,5 +258,5 @@ for game in config['games'].keys():
         print('{0} was skipped'.format(game))
 
 utils.zip(config['output_path'])
-#utils.format_file('assets.zip', input_path=config['output_path'], output_path=config['input_path'])
-#utils.remove_file(config['output_path'], 'assets.zip')
+utils.format_file('assets.zip', input_path=config['output_path'], output_path=config['input_path'])
+utils.remove_file(config['output_path'], 'assets.zip')
