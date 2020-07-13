@@ -63,7 +63,7 @@ class GamesManager:
 
         if not os.path.exists(self.output_path):
             os.makedirs(self.output_path)
-        # self.utils.translate_menus(config, game)
+        self.utils.translate_menus(config, game)
         for file in config['games'][game]['filenames']:
             if os.path.isfile('{0}{1}{2}'.format(self.input_path, file, '.jet')) and config['games'][game]['filenames'][file]['translate']:
                 if 'special_characters' in config['games'][game]['filenames'][file]:

@@ -27,7 +27,7 @@ default_config = {
         "MENU_GAME_NAME_1": "Fibber 3",
         "QUIT": "SALIR"
     },
-    "localization_skip_words": ['twitter', 'spice girls', 'sub-zero'],
+    "localization_skip_words": ['twitter', 'spice girls', 'sub-zero', 'none', 'a'],
     "games": {
         "PartyPack": {
             "path": "assets\\games\\PartyPack",
@@ -49,6 +49,53 @@ default_config = {
                     "special_characters": [['<', '>'], ['[', ']']],
                     "v": [3, 4, 6, 8, 10, 12, 13],
                     "episodeid": 1353
+                }
+            }
+        },
+        "Fibbage3": {
+            "path": "assets\\games\\Fibbage3",
+            "translate": True,
+
+            "filenames": {
+                'fibbageshortie': {
+                    "translate": True,
+                    "has_folder": True,
+                    "strings": ['category'],
+                    "dicts": [],
+                    "dict_arrays": [],
+                    "special_characters": [['<', '>'], ['[', ']']],
+                    "v": [5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 19],
+                    "episodeid": 1307
+                },
+                'fibbagespecial': {
+                    "translate": True,
+                    "has_folder": True,
+                    "strings": ['category'],
+                    "dicts": [],
+                    "dict_arrays": [],
+                    "special_characters": [['<', '>'], ['[', ']']],
+                    "v": [5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 19],
+                    "episodeid": 1317
+                },
+                'finalfibbage': {
+                    "translate": True,
+                    "has_folder": True,
+                    "strings": ['category'],
+                    "dicts": [],
+                    "dict_arrays": [],
+                    "special_characters": [['<', '>'], ['[', ']']],
+                    "v": [5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 19],
+                    "episodeid": 1313
+                },
+                'tmishortie': {
+                    "translate": True,
+                    "has_folder": True,
+                    "strings": ['personal'],
+                    "dicts": [],
+                    "dict_arrays": [],
+                    "special_characters": [['<', '>'], ['[', ']']],
+                    "v": [5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 19],
+                    "episodeid": 1309
                 }
             }
         }
