@@ -199,6 +199,29 @@ class Utils:
                 print("Error: assets.zip file not found on input_path.")
                 exit(-1)
 
+    def translate_menus(self, config, game, special_characters=None):
+
+        input_menu_path = "{0}\\{1}\\".format(config['input_path'], config['games'][game]['path'])
+        output_menu_path = "{0}\\{1}\\".format(config['output_path'], config['games'][game]['path'])
+
+        localization = self.read_json('{0}\\{1}'.format(input_menu_path, 'Localization.json'))
+        amount_of_files = len(localization['table']['en'])
+        index = 0
+        for line in localization['table']['en']:
+            index += 1
+            if isinstance(localization['table']['en'][line], list):
+                # If the current object is a list, translate the list values
+                for i in range(0, len(localization['table']['en'][line])):
+                    localization['table']['en'][line][i] = self.translate(localization['table']['en'][line][i], special_characters=special_characters)
+            else:
+                if line in config['localization_forced_ins'].keys:
+                    localization['table']['en'][line] = config['localization_forced_ins']['line']
+                else:
+                    localization['table']['en'][line] = self.translate(localization['table']['en'][line], special_characters=special_characters)
+
+            print("Translating in-game Menu ({1}%): {0}".format(line, int((index / amount_of_files) * 100)))
+        self.write_json(localization, '{0}'.format(output_menu_path), 'Localization.json')
+
     def __init__(self):
         app = Flask(__name__)
         self.translator = translator(app)

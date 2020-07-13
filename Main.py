@@ -6,6 +6,16 @@ default_config = {
     "output_path": "",
     "games_path": "assets\\games\\",
     "language": "es",
+    "localization_forced_ins": {
+        'LANGUAGE_NAME': 'Español',
+        'BACK': 'ATRAS',
+        'CLOSE': 'CERRAR',
+        'ON': 'ENCENDIDO',
+        'BACK_TO_PACK': 'ATRAS',
+        'GO_TO': 'VE A',
+        'PRESS': 'PULSA',
+        'EVERYBODYS_IN': 'TODOS LISTOS'
+    },
     "games": {
         "Bracketeering": {
             "path": "assets\\games\\Bracketeering",
