@@ -240,6 +240,35 @@ default_config = {
                 }
             }
         },
+        "SurviveTheInternet": {
+            "path": "assets\\games\\SurviveTheInternet",
+            "translate": True,
+            "filenames": {
+                'STIDesktopFolderName': {
+                    "translate": True,
+                    "has_folder": True,
+                    "single_structure": True,
+                    "strings": ['text'],
+                    "dicts": [],
+                    "dict_arrays": [],
+                    "special_characters": None,
+                    "v": [],
+                    "s": [],
+                    "episodeid": 0
+                },
+                'STIAddressBarGag': {
+                    "translate": True,
+                    "has_folder": False,
+                    "strings": [],
+                    "dicts": [],
+                    "dict_arrays": ['history'],
+                    "special_characters": None,
+                    "v": [],
+                    "s": [],
+                    "episodeid": 0
+                }
+            }
+        }
     }
 }
 
