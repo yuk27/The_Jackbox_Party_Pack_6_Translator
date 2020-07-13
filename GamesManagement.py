@@ -66,3 +66,4 @@ class GamesManager:
                 self.translate_file('{0}\\{1}'.format(file, '.jet'), config['games'][game]['filenames'][file], special_characters=special_characters)
                 if file['has_folder']:
                     self.translate_folder(file)
+

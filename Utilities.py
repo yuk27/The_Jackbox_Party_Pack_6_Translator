@@ -207,6 +207,7 @@ class Utils:
         localization = self.read_json('{0}\\{1}'.format(input_menu_path, 'Localization.json'))
         amount_of_files = len(localization['table']['en'])
         index = 0
+
         for line in localization['table']['en']:
             index += 1
             if isinstance(localization['table']['en'][line], list):
@@ -215,7 +216,7 @@ class Utils:
                     localization['table']['en'][line][i] = self.translate(localization['table']['en'][line][i], special_characters=special_characters)
             else:
                 if line in config['localization_forced_ins'].keys:
-                    localization['table']['en'][line] = config['localization_forced_ins']['line']
+                    localization['table']['en'][line] = config['localization_forced_ins'][line]
                 else:
                     localization['table']['en'][line] = self.translate(localization['table']['en'][line], special_characters=special_characters)
 

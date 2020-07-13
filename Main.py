@@ -33,6 +33,11 @@ default_config = {
                     "id": 1353
                 }
             }
+        },
+        "PartyPack": {
+            "path": "assets\\games\\PartyPack",
+            "translate": True,
+            "filenames": {}
         }
     }
 }
