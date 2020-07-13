@@ -27,7 +27,7 @@ default_config = {
         "MENU_GAME_NAME_1": "Fibber 3",
         "QUIT": "SALIR"
     },
-    "localization_skip_words": ['twitter', 'spice girls', 'sub-zero', 'none', 'a', 'true', 'false'],
+    "localization_skip_words": ['twitter', 'spice girls', 'sub-zero', 'none', 'a', 'true', 'false', 'superman'],
     "games": {
         "PartyPack": {
             "path": "assets\\games\\PartyPack",
@@ -191,7 +191,55 @@ default_config = {
                     "episodeid": 0
                 }
             }
-        }
+        },
+        "Overdrawn": {
+            "path": "assets\\games\\Overdrawn",
+            "translate": True,
+
+            "filenames": {
+                'CivicDoodleMapJokes': {
+                    "translate": True,
+                    "has_folder": False,
+                    "strings": ['LocationName1',
+                                'LocationName0',
+                                'LocationType0',
+                                'LocationType1',
+                                'LocationName3',
+                                'LocationName2',
+                                'LocationType2',
+                                'LocationType3']
+                    ,
+                    "dicts": [],
+                    "dict_arrays": [],
+                    "special_characters": None,
+                    "v": [],
+                    "s": [],
+                    "episodeid": 1337
+                },
+                'CivicDoodleFinal': {
+                    "translate": True,
+                    "has_folder": True,
+                    "strings": ['category'],
+                    "dicts": [],
+                    "dict_arrays": [],
+                    "special_characters": [['<', '>'], ['[', ']']],
+                    "v": [3, 4, 5],
+                    "s": [],
+                    "episodeid": 1338
+                },
+                'CivicDoodleStartingArt': {
+                    "translate": True,
+                    "has_folder": False,
+                    "strings": ['category'],
+                    "dicts": [],
+                    "dict_arrays": [],
+                    "special_characters": [['<', '>'], ['[', ']']],
+                    "v": [],
+                    "s": [],
+                    "episodeid": 1230
+                }
+            }
+        },
     }
 }
 
