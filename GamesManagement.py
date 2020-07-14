@@ -11,6 +11,9 @@ class GamesManager:
         file_name = file[:-4]
         data = self.utils.read_json("{0}\\{1}".format(self.input_path, file))
 
+        if self.config['games'][self.game]['filenames'][file_name]['episodeid'] > 0:
+            data['episodeid'] = self.config['games'][self.game]['filenames']['{0}'.format(file[:-4])]['episodeid']
+
         amount_of_lines = len(data['content'])
         index = 0
         for line in data['content']:
@@ -58,6 +61,11 @@ class GamesManager:
                 if internal_dict in line.keys():
                     for t in line[internal_dict].keys():
                         line[internal_dict][t] = self.utils.translate(line[internal_dict][t], special_characters=special_characters)
+
+            if 'arrays' in self.config['games'][self.game]['filenames'][file_name].keys():
+                for array in self.config['games'][self.game]['filenames'][file_name]['arrays']:
+                    for i in range(0, len(array)):
+                        array[i] = self.utils.translate(array[i], special_characters=special_characters)
 
             for key in self.config['games'][self.game]['filenames'][file_name]['dict_arrays']:
                 if key in line.keys():

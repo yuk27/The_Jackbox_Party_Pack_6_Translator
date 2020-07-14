@@ -2,9 +2,9 @@ from Utilities import Utils
 from GamesManagement import GamesManager
 
 default_config = {
-    "input_path": "",
+    "input_path": "C:\\Users\\Jsolano\\Downloads\\The Jackbox Party Pack 5\\",
     "output_path": "",
-    "games_path": "assets\\games\\",
+    "games_path": "games\\",
     "language": "es",
     "localization_forced_ins": {
         'LANGUAGE_NAME': 'Español',
@@ -19,250 +19,122 @@ default_config = {
         "SETTINGS_VOLUME_DESCRIPTION": "Haz que el juego suene ALTO o BAJO.",
         'VOLUME_DESCRIPTION': 'Haz que el juego suene ALTO o BAJO.',
         'TWITCH_REQUIRED': 'Requerir cuenta en TWITCH',
-        "BLIND_BRACKET": "BRAKET CIEGO",
-        "TRIPLE_BLIND_BRACKET": "BRACKET CIEGO TRIPLE",
-        "BRACKET_WINNERS": "GANADORES DEL BRACKET",
         "LEADERBOARD": "Tabla de Puntos",
         "BADGE_TITLE_FAMILY_MODE": "APTO PARA TODA LA FAMILIA",
-        "MENU_GAME_NAME_1": "Fibber 3",
         "QUIT": "SALIR"
     },
     "localization_skip_words": ['twitter', 'spice girls', 'sub-zero', 'none', 'a', 'true', 'false', 'superman'],
     "games": {
         "PartyPack": {
-            "path": "assets\\games\\PartyPack",
+            "path": "games\\PartyPack",
             "translate": True,
             "filenames": {}
         },
-        "Bracketeering": {
-            "path": "assets\\games\\Bracketeering",
+        "PatentlyStupid": {
+            "path": "games\\PatentlyStupid",
             "translate": True,
 
             "filenames": {
-                'BRKPrompt': {
+                'PatentlyStupidGeneDrawing': {
                     "translate": True,
                     "has_folder": True,
-                    "strings": ['category'],
+                    "single_structure": True,
+                    "strings": ['Title'],
+                    "dicts": [],
+                    "dict_arrays": [],
+                    "special_characters": None,
+                    "v": [1, 2],
+                    "s": [],
+                    "episodeid": 1230
+                },
+                'PatentlyStupidShortie': {
+                    "translate": True,
+                    "has_folder": True,
+                    "strings": ['decoys', 'prompt'],
                     "dicts": ['prompt'],
                     "dict_arrays": ['decoys', 'twists', 'facts'],
-                    "special_characters": [['<', '>'], ['[', ']']],
-                    "v": [],
-                    "s": [15, 16, 17, 19, 21],
+                    "special_characters": [['<', '>']],
+                    "v": [2, 3, 4],
+                    "s": [],
                     "episodeid": 1353
                 }
             }
         },
-        "Fibbage3": {
-            "path": "assets\\games\\Fibbage3",
-            "translate": True,
+        "SplitTheRoom": {
+            "path": "games\\SplitTheRoom",
+            "translate": False,
 
             "filenames": {
-                'fibbageshortie': {
+                'SplitTheRoomFinal': {
                     "translate": True,
                     "has_folder": True,
-                    "strings": ['category'],
+                    "strings": ['answerText', 'scenarioText', 'decoys', 'category', 'questionText'],
                     "dicts": [],
                     "dict_arrays": [],
                     "special_characters": [['<', '>'], ['[', ']']],
-                    "v": [5, 7, 8, 9, 10, 11, 12, 13, 14],
-                    "s": [15, 16, 18, 19],
-                    "episodeid": 1307
+                    "v": [3, 5, 6, 7, 8, 9, 10, 12, 16],
+                    "s": [17, 18, 19],
+                    "episodeid": 1353
                 },
-                'fibbagespecial': {
+                'SplitTheRoomLater': {
                     "translate": True,
                     "has_folder": True,
-                    "strings": ['category'],
+                    "strings": ['answerText', 'scenarioText', 'decoys', 'category', 'questionText'],
                     "dicts": [],
                     "dict_arrays": [],
                     "special_characters": [['<', '>'], ['[', ']']],
-                    "v": [5, 7, 8, 9, 10, 11, 12, 13, 14],
-                    "s": [15, 16, 18, 19],
-                    "episodeid": 1317
+                    "v": [3, 5, 7, 8, 9, 10, 12, 14],
+                    "s": [15, 16, 17],
+                    "episodeid": 1371
                 },
-                'finalfibbage': {
+                'SplitTheRoomShortie': {
                     "translate": True,
                     "has_folder": True,
-                    "strings": ['category'],
+                    "strings": ['answerText', 'scenarioText', 'decoys', 'category', 'questionText'],
                     "dicts": [],
                     "dict_arrays": [],
                     "special_characters": [['<', '>'], ['[', ']']],
-                    "v": [5, 7, 8, 9, 10, 11, 12, 13, 14],
-                    "s": [15, 16, 18, 19],
-                    "episodeid": 1313
-                },
-                'tmishortie': {
-                    "translate": True,
-                    "has_folder": True,
-                    "strings": ['personal'],
-                    "dicts": [],
-                    "dict_arrays": [],
-                    "special_characters": [['<', '>'], ['[', ']']],
-                    "v": [5, 7, 8, 9, 10, 11, 12, 13, 14],
-                    "s": [15, 16, 18, 19],
-                    "episodeid": 1309
+                    "v": [3, 5, 7, 9, 10, 12, 14],
+                    "s": [15, 16, 17],
+                    "episodeid": 1352
                 }
             }
         },
-        "MonsterMingle": {
-            "path": "assets\\games\\MonsterMingle",
-            "translate": True,
+        "SlingShoot": {
+            "path": "games\\SlingShoot",
+            "translate": False,
 
             "filenames": {
-                'MMMonster': {
+                'SSDifficulty': {
                     "translate": True,
                     "has_folder": False,
-                    "strings": ['name', 'shortDescription', 'description', 'selfDescription'],
-                    "dicts": ['powerpopup', 'epitaph', 'hint'],
-                    "dict_arrays": [],
-                    "special_characters": [['<', '>'], ['[', ']']],
-                    "v": [],
-                    "s": [],
-                    "episodeid": 0
-                },
-                'MMMonsterAudienceAnswer': {
-                    "translate": True,
-                    "has_folder": True,
-                    "single_structure": True,
-                    "strings": ['answer'],
+                    "strings": ['mission'],
                     "dicts": [],
+                    "arrays": ['titles'],
                     "dict_arrays": [],
-                    "special_characters": None,
+                    "special_characters": [['<', '>']],
                     "v": [],
                     "s": [],
                     "episodeid": 0
                 },
-                'MMMonsterAudienceQuestion': {
-                    "translate": True,
-                    "has_folder": True,
-                    "single_structure": True,
-                    "strings": ['question'],
-                    "dicts": [],
-                    "dict_arrays": [],
-                    "special_characters": None,
-                    "v": [],
-                    "s": [],
-                    "episodeid": 0
-                },
-                'MMMonsterNpc': {
-                    "translate": False,
-                    "has_folder": False,
-                    "strings": ['name', 'shortDescription', 'description', 'selfDescription'],
-                    "dicts": ['powerpopup', 'epitaph', 'hint'],
-                    "dict_arrays": [],
-                    "special_characters": [['<', '>'], ['[', ']']],
-                    "v": [],
-                    "s": [],
-                    "episodeid": 0
-                },
-                'MMMonsterNpcAnswer': {
-                    "translate": True,
-                    "has_folder": True,
-                    "single_structure": True,
-                    "strings": ['answer'],
-                    "dicts": [],
-                    "dict_arrays": [],
-                    "special_characters": None,
-                    "v": [],
-                    "s": [],
-                    "episodeid": 0
-                },
-                'MMSecretWords': {
-                    "translate": True,
-                    "has_folder": True,
-                    "single_structure": True,
-                    "strings": ['word'],
-                    "dicts": [],
-                    "dict_arrays": [],
-                    "special_characters": None,
-                    "v": [],
-                    "s": [],
-                    "episodeid": 0
-                },
-                'MMSponsors': {
-                    "translate": True,
-                    "has_folder": True,
-                    "single_structure": True,
-                    "strings": ['sponsor'],
-                    "dicts": [],
-                    "dict_arrays": [],
-                    "special_characters": None,
-                    "v": [],
-                    "s": [],
-                    "episodeid": 0
-                }
-            }
-        },
-        "Overdrawn": {
-            "path": "assets\\games\\Overdrawn",
-            "translate": True,
-
-            "filenames": {
-                'CivicDoodleMapJokes': {
+                'SSEnemies': {
                     "translate": True,
                     "has_folder": False,
-                    "strings": ['LocationName1',
-                                'LocationName0',
-                                'LocationType0',
-                                'LocationType1',
-                                'LocationName3',
-                                'LocationName2',
-                                'LocationType2',
-                                'LocationType3']
-                    ,
+                    "strings": ['title'],
                     "dicts": [],
                     "dict_arrays": [],
-                    "special_characters": None,
-                    "v": [],
-                    "s": [],
-                    "episodeid": 1337
-                },
-                'CivicDoodleFinal': {
-                    "translate": True,
-                    "has_folder": True,
-                    "strings": ['category'],
-                    "dicts": [],
-                    "dict_arrays": [],
-                    "special_characters": [['<', '>'], ['[', ']']],
-                    "v": [3, 4, 5],
-                    "s": [],
-                    "episodeid": 1338
-                },
-                'CivicDoodleStartingArt': {
-                    "translate": True,
-                    "has_folder": False,
-                    "strings": ['category'],
-                    "dicts": [],
-                    "dict_arrays": [],
-                    "special_characters": [['<', '>'], ['[', ']']],
-                    "v": [],
-                    "s": [],
-                    "episodeid": 1230
-                }
-            }
-        },
-        "SurviveTheInternet": {
-            "path": "assets\\games\\SurviveTheInternet",
-            "translate": True,
-            "filenames": {
-                'STIDesktopFolderName': {
-                    "translate": True,
-                    "has_folder": True,
-                    "single_structure": True,
-                    "strings": ['text'],
-                    "dicts": [],
-                    "dict_arrays": [],
-                    "special_characters": None,
-                    "v": [],
-                    "s": [],
+                    "special_characters": [['<', '>']],
+                    "v": [3, 5, 7, 8, 9, 10, 12, 14],
+                    "s": [15, 16, 17],
                     "episodeid": 0
                 },
-                'STIAddressBarGag': {
+                'SSWeapons': {
                     "translate": True,
                     "has_folder": False,
-                    "strings": [],
+                    "strings": ['title', 'description'],
                     "dicts": [],
-                    "dict_arrays": ['history'],
-                    "special_characters": None,
+                    "dict_arrays": [],
+                    "special_characters": [['<', '>']],
                     "v": [],
                     "s": [],
                     "episodeid": 0
@@ -274,10 +146,7 @@ default_config = {
 
 utils = Utils()
 config = utils.create_config(default_config)
-utils.format_file('assets.bin', input_path=config['input_path'])
-utils.unzip_assets(config)
-utils.remove_file(config['input_path'], 'assets.zip')
-utils.refresh_output('{0}\\{1}'.format(config['input_path'], 'assets'),'{0}\\{1}'.format(config['output_path'], 'assets'))
+utils.refresh_output(config['input_path'], config['output_path'])
 
 for game in config['games'].keys():
     if config['games'][game]['translate']:
@@ -285,7 +154,3 @@ for game in config['games'].keys():
         gamesManager = GamesManager(config, utils, game)
     else:
         print('{0} was skipped'.format(game))
-
-utils.zip(config['output_path'])
-utils.format_file('assets.zip', input_path=config['output_path'], output_path=config['input_path'])
-utils.remove_file(config['output_path'], 'assets.zip')

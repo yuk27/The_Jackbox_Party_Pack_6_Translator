@@ -23,7 +23,7 @@ class Utils:
     @staticmethod
     def zip(path, output_filename='assets'):
         print("Zipping {1} file into path: {0}".format(path, output_filename))
-        make_archive("{0}\\{1}".format(path, output_filename), 'zip', "{0}\\{1}".format(path, 'assets'))
+        make_archive("{0}\\{1}".format(path, output_filename), 'zip', path)
 
     @staticmethod
     def remove_special_values(text, open_symbol='<', closing_symbol='>'):
@@ -129,10 +129,11 @@ class Utils:
     def copy_directory(input_directory, output_directory):
         copytree(input_directory, output_directory)
 
-    def refresh_output(self, input_path, output_path):
+    def refresh_output(self, input_path, output_path, copy_directory=False):
         if os.path.exists(output_path) and os.path.isdir(output_path):
             rmtree(output_path, ignore_errors=True)
-        self.copy_directory(input_path, output_path)
+        if copy_directory:
+            self.copy_directory(input_path, output_path)
 
     @staticmethod
     def remove_file(path, file_name):
@@ -177,7 +178,7 @@ class Utils:
             config = Utils.read_json(self.config_path)
             print("Config found")
         else:
-            default_config['input_path'] = self.local_path
+            # default_config['input_path'] = self.local_path
             default_config['output_path'] = "{0}\\{1}\\".format(self.local_path, "output")
             config = default_config
             Utils.write_json(default_config, self.local_path, "config.json")
