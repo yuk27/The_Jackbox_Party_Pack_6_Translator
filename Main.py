@@ -2,7 +2,7 @@ from Utilities import Utils
 from GamesManagement import GamesManager
 
 default_config = {
-    "input_path": "C:\\Users\\Jsolano\\Downloads\\The Jackbox Party Pack 5\\",
+    "input_path": "X:\Juegos\PC\Jackbox Party\The Jackbox Party Pack 6",
     "output_path": "",
     "games_path": "games\\",
     "language": "es",
@@ -38,7 +38,6 @@ default_config = {
                 'PatentlyStupidGeneDrawing': {
                     "translate": True,
                     "has_folder": True,
-                    "single_structure": True,
                     "strings": ['Title'],
                     "dicts": [],
                     "dict_arrays": [],
@@ -51,18 +50,18 @@ default_config = {
                     "translate": True,
                     "has_folder": True,
                     "strings": ['decoys', 'prompt'],
-                    "dicts": ['prompt'],
-                    "dict_arrays": ['decoys', 'twists', 'facts'],
-                    "special_characters": [['<', '>']],
+                    "dicts": [],
+                    "dict_arrays": [],
+                    "special_characters": None,
                     "v": [2, 3, 4],
                     "s": [],
-                    "episodeid": 1353
+                    "episodeid": 1368
                 }
             }
         },
         "SplitTheRoom": {
             "path": "games\\SplitTheRoom",
-            "translate": False,
+            "translate": True,
 
             "filenames": {
                 'SplitTheRoomFinal': {
@@ -102,7 +101,7 @@ default_config = {
         },
         "SlingShoot": {
             "path": "games\\SlingShoot",
-            "translate": False,
+            "translate": True,
 
             "filenames": {
                 'SSDifficulty': {
