@@ -70,8 +70,8 @@ class GamesManager:
             for key in self.config['games'][self.game]['filenames'][file_name]['dict_arrays']:
                 if key in line.keys():
                     for t in range(0, len(line[key])):
-                        for v in line[key][t].keys():
-                            line[key][t][v] = self.utils.translate(line[key][t][v], special_characters=special_characters)
+                        #for v in line[key][t].keys():
+                        line[key][t]['text'] = self.utils.translate(line[key][t]['text'], special_characters=special_characters)
 
             print("{0} - {1}% - {2}".format(file_name, int((index / amount_of_lines) * 100), line))
         self.utils.write_json(data, self.output_path, file)

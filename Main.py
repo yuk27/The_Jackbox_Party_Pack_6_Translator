@@ -30,115 +30,144 @@ default_config = {
             "translate": True,
             "filenames": {}
         },
-        "PatentlyStupid": {
-            "path": "games\\PatentlyStupid",
+        "TriviaDeath2": {
+            "path": "games\\TriviaDeath2",
             "translate": True,
 
             "filenames": {
-                'PatentlyStupidGeneDrawing': {
+                'QuiplashContent': {
                     "translate": True,
                     "has_folder": True,
-                    "strings": ['Title'],
+                    "strings": ['prompt'],
                     "dicts": [],
                     "dict_arrays": [],
-                    "special_characters": None,
-                    "v": [1, 2],
-                    "s": [],
+                    "special_characters": [['<', '>'], ['[', ']']],
+                    "v": [5],
+                    "s": [8],
                     "episodeid": 1230
                 },
-                'PatentlyStupidShortie': {
+                'TDFinalRound': {
                     "translate": True,
                     "has_folder": True,
-                    "strings": ['decoys', 'prompt'],
+                    "strings": ['text'],
                     "dicts": [],
-                    "dict_arrays": [],
+                    "dict_arrays": ['choices'],
                     "special_characters": None,
                     "v": [2, 3, 4],
                     "s": [],
-                    "episodeid": 1368
-                }
-            }
-        },
-        "SplitTheRoom": {
-            "path": "games\\SplitTheRoom",
-            "translate": True,
-
-            "filenames": {
-                'SplitTheRoomFinal': {
-                    "translate": True,
-                    "has_folder": True,
-                    "strings": ['answerText', 'scenarioText', 'decoys', 'category', 'questionText'],
-                    "dicts": [],
-                    "dict_arrays": [],
-                    "special_characters": [['<', '>'], ['[', ']']],
-                    "v": [3, 5, 6, 7, 8, 9, 10, 12, 16],
-                    "s": [17, 18, 19],
-                    "episodeid": 1353
+                    "episodeid": 1390
                 },
-                'SplitTheRoomLater': {
+                'TDMindMeld': {
                     "translate": True,
                     "has_folder": True,
-                    "strings": ['answerText', 'scenarioText', 'decoys', 'category', 'questionText'],
+                    "strings": ['text'],
                     "dicts": [],
-                    "dict_arrays": [],
-                    "special_characters": [['<', '>'], ['[', ']']],
-                    "v": [3, 5, 7, 8, 9, 10, 12, 14],
-                    "s": [15, 16, 17],
-                    "episodeid": 1371
+                    "dict_arrays": ['choices'],
+                    "special_characters": None,
+                    "v": [2, 3, 4],
+                    "s": [],
+                    "episodeid": 1390
                 },
-                'SplitTheRoomShortie': {
-                    "translate": True,
-                    "has_folder": True,
-                    "strings": ['answerText', 'scenarioText', 'decoys', 'category', 'questionText'],
-                    "dicts": [],
-                    "dict_arrays": [],
-                    "special_characters": [['<', '>'], ['[', ']']],
-                    "v": [3, 5, 7, 9, 10, 12, 14],
-                    "s": [15, 16, 17],
-                    "episodeid": 1352
-                }
-            }
-        },
-        "SlingShoot": {
-            "path": "games\\SlingShoot",
-            "translate": True,
-
-            "filenames": {
-                'SSDifficulty': {
+                'TDMirror': {
                     "translate": True,
                     "has_folder": False,
-                    "strings": ['mission'],
+                    "strings": ['password'],
                     "dicts": [],
-                    "arrays": ['titles'],
                     "dict_arrays": [],
-                    "special_characters": [['<', '>']],
+                    "special_characters":  [['<', '>'], ['[', ']']],
+                    "v": [5],
+                    "s": [7],
+                    "episodeid": 0
+                },
+                'TDMirrorTutorial': {
+                    "translate": True,
+                    "has_folder": False,
+                    "strings": ['password'],
+                    "dicts": [],
+                    "dict_arrays": [],
+                    "special_characters": None,
                     "v": [],
                     "s": [],
                     "episodeid": 0
                 },
-                'SSEnemies': {
+                'TDQuestion': {
                     "translate": True,
-                    "has_folder": False,
-                    "strings": ['title'],
+                    "has_folder": True,
+                    "strings": ['text'],
                     "dicts": [],
-                    "dict_arrays": [],
-                    "special_characters": [['<', '>']],
-                    "v": [3, 5, 7, 8, 9, 10, 12, 14],
-                    "s": [15, 16, 17],
-                    "episodeid": 0
+                    "dict_arrays": ['choices'],
+                    "special_characters": None,
+                    "v": [],
+                    "s": [],
+                    "episodeid": 1391
                 },
-                'SSWeapons': {
+                'TDQuestionBomb': {
                     "translate": True,
-                    "has_folder": False,
-                    "strings": ['title', 'description'],
+                    "has_folder": True,
+                    "strings": ['text'],
                     "dicts": [],
                     "dict_arrays": [],
-                    "special_characters": [['<', '>']],
+                    "special_characters": [['<', '>'], ['[', ']']],
+                    "v": [],
+                    "s": [],
+                    "episodeid": 1391
+                },
+                'TDQuestionHat': {
+                    "translate": True,
+                    "has_folder": False,
+                    "strings": ['text'],
+                    "dicts": [],
+                    "dict_arrays": ['choices'],
+                    "special_characters": [['<', '>'], ['[', ']']],
+                    "v": [2, 3, 4],
+                    "s": [],
+                    "episodeid": 1392
+                },
+                'TDQuestionKnife': {
+                    "translate": True,
+                    "has_folder": False,
+                    "strings": ['text'],
+                    "dicts": [],
+                    "dict_arrays": ['choices'],
+                    "special_characters": [['<', '>'], ['[', ']']],
+                    "v": [],
+                    "s": [],
+                    "episodeid": 1394
+                },
+                'TDQuestionMadness': {
+                    "translate": True,
+                    "has_folder": False,
+                    "strings": ['text'],
+                    "dicts": [],
+                    "dict_arrays": ['choices'],
+                    "special_characters": [['<', '>'], ['[', ']']],
+                    "v": [],
+                    "s": [],
+                    "episodeid": 1395
+                 },
+                'TDQuestionWig': {
+                     "translate": True,
+                     "has_folder": False,
+                     "strings": ['text'],
+                     "dicts": [],
+                     "dict_arrays": ['choices'],
+                     "special_characters": [['<', '>'], ['[', ']']],
+                     "v": [],
+                     "s": [],
+                     "episodeid": 1389
+                },
+                'TDSequel': {
+                    "translate": True,
+                    "has_folder": False,
+                    "strings": ['text'],
+                    "dicts": ['text'],
+                    "dict_arrays": ['choices'],
+                    "special_characters": [['<', '>'], ['[', ']']],
                     "v": [],
                     "s": [],
                     "episodeid": 0
                 }
-            }
+            },
         }
     }
 }
