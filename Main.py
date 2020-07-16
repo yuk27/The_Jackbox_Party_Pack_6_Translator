@@ -2,7 +2,7 @@ from Utilities import Utils
 from GamesManagement import GamesManager
 
 default_config = {
-    "input_path": "X:\Juegos\PC\Jackbox Party\The Jackbox Party Pack 6",
+    "input_path": "C:\\Users\\Juan Carlos Solano\\Documents\\Mine\\The Jackbox Party Pack 6",
     "output_path": "",
     "games_path": "games\\",
     "language": "es",
@@ -23,7 +23,7 @@ default_config = {
         "BADGE_TITLE_FAMILY_MODE": "APTO PARA TODA LA FAMILIA",
         "QUIT": "SALIR"
     },
-    "localization_skip_words": ['twitter', 'spice girls', 'sub-zero', 'none', 'a', 'true', 'false', 'superman'],
+    "localization_skip_words": ['twitter', 'spice girls', 'sub-zero', 'none', 'a', 'true', 'false', 'superman', 'frozen'],
     "games": {
         "PartyPack": {
             "path": "games\\PartyPack",
@@ -53,8 +53,8 @@ default_config = {
                     "dicts": [],
                     "dict_arrays": ['choices'],
                     "special_characters": None,
-                    "v": [2, 3, 4],
-                    "s": [],
+                    "v": [0],
+                    "s": [1],
                     "episodeid": 1390
                 },
                 'TDMindMeld': {
@@ -64,8 +64,8 @@ default_config = {
                     "dicts": [],
                     "dict_arrays": ['choices'],
                     "special_characters": None,
-                    "v": [2, 3, 4],
-                    "s": [],
+                    "v": [1],
+                    "s": [2],
                     "episodeid": 1390
                 },
                 'TDMirror': {
@@ -103,7 +103,7 @@ default_config = {
                 },
                 'TDQuestionBomb': {
                     "translate": True,
-                    "has_folder": True,
+                    "has_folder": False,
                     "strings": ['text'],
                     "dicts": [],
                     "dict_arrays": [],
@@ -174,7 +174,7 @@ default_config = {
 
 utils = Utils()
 config = utils.create_config(default_config)
-utils.refresh_output(config['input_path'], config['output_path'])
+#utils.refresh_output(config['input_path'], config['output_path'])
 
 for game in config['games'].keys():
     if config['games'][game]['translate']:
